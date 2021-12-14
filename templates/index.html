@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Student Form</title>
+  </head>
+  <style>
+    h3{
+      text-align: center;
+    }
+  </style>
+  <body>
+   <div class="alert alert-danger" role="alert">
+    <div class="d-grid gap-2 col-7 mx-auto"><h3>******** Student Admission Form ********</h3></div>
+    For Help <a  href={% url 'contact' %}> Click here</a>
+    
+
+    </div>
+    <form method="post" action="/">
+      {% csrf_token %}
+      <div class="row g-2">
+        <div class="col-md">
+          <div class="alert alert-warning" role="alert">
+            <h5>Student Details</h5>
+           </div>
+          <div class="p-2 mb-2 bg-secondary text-white">Enter your Email Address</div>
+          
+          <input type="email" class="form-control" id="semail" name="semail" placeholder="Email Address">
+        </div>
+          <div class="col-md">
+          <div class="alert alert-warning" role="alert">
+            <h5>Parent Details</h5>
+           </div>
+          <div class="p-2 mb-2 bg-secondary text-white">Enter Parent Email Address </div>
+          <input type="email" class="form-control" id="pemail" name="pemail" placeholder="Email Address">
+        
+          </div>
+      </div><br>
+          <div class="row g-2">
+            <div class="col-md">
+        <div class="p-2 mb-2 bg-secondary text-white">Enter your name</div>
+        
+        <div class="row g-3">
+          <div class="col">
+            <input type="text" class="form-control" id="sfname" name="sfname" placeholder="First name">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" id="slname" name="slname" placeholder="Last name">
+          </div>
+        </div></div>
+        <div class="col-md">
+        <div class="p-2 mb-2 bg-secondary text-white">Enter Parents name</div>
+        
+        <div class="row g-3">
+          <div class="col">
+            <input type="text" class="form-control" id="pfname" name="pfname" placeholder="First name">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" id="plname" name="plname" placeholder="Last name">
+          </div>
+        </div></div></div><br>
+        <div class="row g-2">
+          <div class="col-md">
+            <div class="p-2 mb-2 bg-secondary text-white">Enter your Address</div>
+            <input type="text" class="form-control"id="sadd" name="sadd" placeholder="Address" ><br>
+          </div>
+          <div class="col-md">
+            <div class="p-2 mb-2 bg-secondary text-white">Enter Parent Address</div>
+            <input type="text" class="form-control" id="padd" name="padd" placeholder="Address" >
+          </div></div>
+
+          <div class="row g-2">
+            <div class="col-md">
+            <div class="p-2 mb-2 bg-secondary text-white">Enter your Mobile Number</div>
+            <input type="number" class="form-control" id="sphone" name="sphone" placeholder="Mobile Number" >
+            
+            </div>
+          <div class="col-md">
+            <div class="p-2 mb-2 bg-secondary text-white">Enter Parents Mobile Number</div>
+           <input type="number" class="form-control" id="pphone" name= "pphone" placeholder="Mobile Number" >
+            
+          </div></div><br>
+          <div class="row g-2">
+            <div class="col-md">
+            <div class="p-2 mb-2 bg-secondary text-white">Enter your Gender</div>
+            <select class="form-select" id="gender" name="gender" aria-label="Default select example">
+              <option selected >Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="col-md">
+            <div class="p-2 mb-2 bg-secondary text-white">Enter Parents Occupation</div>
+            <input type="text" class="form-control" id="occupation" name="occupation" placeholder="Occupation" >
+
+          </div> </div>
+          <p class="text-center" ><b>-------------****** ****** ****** ******-------------</b></p>
+          <div class="row g-2">
+            <div class="col-md">
+          <div class="p-2 mb-2 bg-secondary text-white">Enter your date of birth</div>
+           <input type="date" class="form-control" id="dob" name="dob" placeholder="date of birth" >
+            </div>
+            <div class="col-md">
+            <div class="p-2 mb-2 bg-secondary text-white">Enter your Category</div>
+            <select class="form-select" id="cat" name="cat" aria-label="Default select example">
+              <option selected>Select Category</option>
+              <option value="OBC">OBC</option>
+              <option value="General">General</option>
+              <option value="SC">SC</option>
+              <option value="ST">ST</option>
+              <option value="VJNT">VJNT</option>
+              <option value="SBC">SBC</option>
+
+
+
+            </select>
+            </div></div><br>
+            <div class="alert alert-warning" role="alert">
+              <h5>Academic Details</h5>
+             </div>
+             <div class="row g-2">
+              <div class="col-md">
+                <div class="p-2 mb-2 bg-secondary text-white">Enter your SSC Marks</div>
+           <input type="number" class="form-control" id="SSC_marks" name="SSC_marks" placeholder="SSC Percentage" >
+          </div>
+           <div class="col-md">
+           <div class="p-2 mb-2 bg-secondary text-white">Enter your HSC Marks</div>
+           <input type="number" class="form-control" id="HSC_marks" name="HSC_marks" placeholder="HSC Percentage" >
+          </div>
+        </div>
+
+          <br> 
+        
+          <div class="d-grid gap-2 col-3 mx-auto">
+           
+        <input type="submit" class="btn btn-danger" onclick=window.print() value="Submit">
+          </div>
+          <br>
+      </form>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
